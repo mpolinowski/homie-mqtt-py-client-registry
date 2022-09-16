@@ -85,6 +85,7 @@ def on_message(client, userdata, msg):
         client.publish("{prefix}features/nightvision/autoircut/raw".format(prefix=mqtt_camera_prefix), msg.payload.decode())
     elif(msg.topic == 'homie/homie_device/privacy/mask1/set'):
         client.publish("{prefix}multimedia/privacy/region1/enable/raw".format(prefix=mqtt_camera_prefix), msg.payload.decode())
+        client.publish("homie/homie_device/privacy/mask1", msg.payload.decode())
     elif(msg.topic == 'homie/homie_device/privacy/mask2/set'):
         client.publish("{prefix}multimedia/privacy/region2/enable/raw".format(prefix=mqtt_camera_prefix), msg.payload.decode())
     elif(msg.topic == 'homie/homie_device/privacy/mask3/set'):
