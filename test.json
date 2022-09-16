@@ -1,0 +1,8 @@
+{
+    "entities": [
+        {
+            "topic": "homie/homie_device/$homie",
+            "payload": "4.0.0"
+        }
+    ]
+}
